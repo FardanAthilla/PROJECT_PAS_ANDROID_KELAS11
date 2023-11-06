@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:project_pas/Page/RegisterPage.dart';
+import 'package:project_pas/App/View/Auth/OTPPage.dart';
+import 'package:project_pas/App/View/Auth/RegisterPage.dart';
 
 Widget buildLogo(BuildContext context) {
     return Image.asset(
@@ -32,7 +33,7 @@ Widget buildLogo(BuildContext context) {
       height: 40,
       child: ElevatedButton(
         onPressed: () {
-          // Kosong ngga ada isi nya nih
+          Get.to(const OTPPage());
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -49,7 +50,7 @@ Widget buildLogo(BuildContext context) {
   Widget buildRegisterButton() {
     return TextButton(
       onPressed: () {
-        Get.off(const RegisterPage());
+        Get.to(const RegisterPage());
       },
       child: RichText(
         text: const TextSpan(
