@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_pas/App/Component/OTPMethod.dart';
+import 'package:project_pas/App/Component/Auth/OTPMethod.dart';
 
 class OTPPage extends StatefulWidget {
   const OTPPage({Key? key}) : super(key: key);

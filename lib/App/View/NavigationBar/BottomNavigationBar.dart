@@ -22,52 +22,79 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-  body: _pages[_currentIndex],
-  bottomNavigationBar: BottomNavigationBar(
-    currentIndex: _currentIndex,
-    onTap: (int index) {
-      setState(() {
-        _currentIndex = index;
-      });
-    },
-    unselectedItemColor: const Color.fromRGBO(255, 255, 255, 0.6),
-    items: const [
-      BottomNavigationBarItem(
-        icon: Icon(
-          Icons.home,
-        ),
-        label: 'Home',
+      appBar: AppBar(
         backgroundColor: Colors.black,
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(
-          Icons.newspaper,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(
+              'image/logo2.png',
+              width: 100,
+            ),
+            IconButton(
+              icon: const Icon(Icons.menu),
+              iconSize: 30,
+              onPressed: () {
+                // Aksi yang ingin Anda jalankan ketika hamburger (menu) ditekan
+              },
+            ),
+          ],
         ),
-        label: 'News',
-        backgroundColor: Colors.black,
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(
-          Icons.shopping_cart,
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(4.0),
+          child: Container(
+            color: Colors.white.withOpacity(0.3),
+            height: 1.0,
+          ),
         ),
-        label: 'Cart',
-        backgroundColor: Colors.black,
       ),
-      BottomNavigationBarItem(
-        icon: Icon(
-          Icons.person,
-        ),
-        label: 'Profile',
-        backgroundColor: Colors.black,
+      body: _pages[_currentIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: (int index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+        unselectedItemColor: const Color.fromRGBO(255, 255, 255, 0.6),
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+            ),
+            label: 'Home',
+            backgroundColor: Colors.black,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.newspaper,
+            ),
+            label: 'News',
+            backgroundColor: Colors.black,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.shopping_cart,
+            ),
+            label: 'Cart',
+            backgroundColor: Colors.black,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person,
+            ),
+            label: 'Profile',
+            backgroundColor: Colors.black,
+          ),
+        ],
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
       ),
-    ],
-    showSelectedLabels: true,
-    showUnselectedLabels: true,
-  ),
-  extendBody: true, 
-  bottomSheet: Container(
-    height: 0.5, // Atur lebar garis di sini
-    color: Colors.white,
-  ),
-);
-  }}
+      extendBody: true,
+      bottomSheet: Container(
+        height: 0.5,
+        color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.5),
+      ),
+    );
+  }
+}

@@ -4,21 +4,21 @@ import 'package:project_pas/App/View/NavigationBar/BottomNavigationBar.dart';
 
   Widget buildOTPTextField(int index,BuildContext context) {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 8), // Adjust the spacing as needed
+    padding: const EdgeInsets.symmetric(horizontal: 8), 
     child: Container(
       width: 40,
       child: TextField(
         keyboardType: TextInputType.number,
         textAlign: TextAlign.center,
-        style: const TextStyle(color: Colors.white), // Text color
+        style: const TextStyle(color: Colors.white), 
         decoration: const InputDecoration(
           
-          hintStyle: TextStyle(color: Colors.white), // Hint text color
+          hintStyle: TextStyle(color: Colors.white), 
           enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: Colors.white), // Underline color
+            borderSide: BorderSide(color: Colors.white), 
           ),
           focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: Colors.white), // Focused underline color
+            borderSide: BorderSide(color: Colors.white),
           ),
         ),
         onChanged: (value) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_pas/App/Component/RegisterMethod.dart';
+import 'package:project_pas/App/Component/Auth/RegisterMethod.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
