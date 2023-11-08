@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
 import 'package:project_pas/App/Component/Auth/OTPMethodPaswword.dart';
 
 class OTPPageRegister extends StatefulWidget {
@@ -35,12 +36,10 @@ class _OTPPageRegisterState extends State<OTPPageRegister> {
               ),
             ),
             const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(
-                4,
-                (index) => buildOTPTextField(index,context),
-              ),
+            Pinput(
+              defaultPinTheme: defaultPinTheme,
+              showCursor: true,
+              // controller: , controller buat ngirim
             ),
             const SizedBox(height: 50),
             buildSubmitButton(context),
