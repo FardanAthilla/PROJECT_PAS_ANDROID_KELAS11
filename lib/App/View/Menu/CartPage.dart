@@ -90,5 +90,9 @@ final games = [
     price: "Rp 100.000,00",
     imagePath: 'image/banner.png',
   ),
+
+  Game(name: "PUBG2", genre: "Open World · FPS", rating: 4.0, price: "Free", imagePath: 'assets/banner.png'),
+  Game(name: "Stumble Guys", genre: "Parkour · Multiplayer", rating: 3.9, price: "Free", imagePath: 'assets/banner.png'),
+  Game(name: "Girls' Connect: Idle RPG", genre: "Idle · Gacha", rating: 4.2, price: "Rp 100.000,00", imagePath: 'assets/banner.png'),
 ];
 
