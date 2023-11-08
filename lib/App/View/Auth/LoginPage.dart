@@ -15,30 +15,28 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF0F0F0F),
-      body: SafeArea(
-        child: Center(
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                buildLogo(context),
-                const Text(
-                  'Sign in to continue',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              buildLogo(context),
+              const Text(
+                'Sign in to continue',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
                 ),
-                const SizedBox(height: 25),
-                buildTextField('Username', Icons.person,),
-                const SizedBox(height: 10),
-                buildTextField('Password', Icons.lock,),
-                buildForgotPasswordButton(),
-                const SizedBox(height: 20),
-                buildLoginButton(context),
-                buildRegisterButton(),
-              ],
-            ),
+              ),
+              const SizedBox(height: 25),
+              buildTextField('Username', Icons.person,),
+              const SizedBox(height: 10),
+              buildTextField('Password', Icons.lock,),
+              buildForgotPasswordButton(),
+              const SizedBox(height: 20),
+              buildLoginButton(context),
+              buildRegisterButton(),
+            ],
           ),
         ),
       ),
