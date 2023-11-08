@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:project_pas/App/Component/Auth/RegisterMethod.dart';
+import 'package:project_pas/App/Component/Auth/SetPasswordMethod.dart';
 
-class RegisterPage extends StatefulWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+class SetPasswordPage extends StatefulWidget {
+  const SetPasswordPage({Key? key}) : super(key: key);
 
   @override
-  _RegisterPageState createState() => _RegisterPageState();
+  _SetPasswordPageState createState() => _SetPasswordPageState();
 }
 
-class _RegisterPageState extends State<RegisterPage> {
+class _SetPasswordPageState extends State<SetPasswordPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,7 @@ class _RegisterPageState extends State<RegisterPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Create Account',
+              'Set Now Password',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 32,
@@ -27,23 +27,18 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
             const SizedBox(height: 5),
             const Text(
-              'Register to continue',
+              'Reset Your Password Here',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
               ),
             ),
-            const SizedBox(height: 80),
-            buildTextField('Username', Icons.person),
-            const SizedBox(height: 10),
-            buildTextField('Email', Icons.email),
-            const SizedBox(height: 10),
+            const SizedBox(height: 50),
             buildTextField('Password', Icons.lock, isPassword: true),
             const SizedBox(height: 10),
             buildTextField('Confirm Password', Icons.lock, isPassword: true),
-            const SizedBox(height: 80),
+            const SizedBox(height: 50),
             buildRegisterButton(context),
-            buildLoginButton(),
           ],
         ),
       ),

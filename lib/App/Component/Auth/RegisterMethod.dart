@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:project_pas/App/View/Auth/LoginPage.dart';
+import 'package:project_pas/App/View/Auth/OTPPageRegister.dart';
+
 
   Widget buildTextField(String hintText, IconData icon, {bool isPassword = false}) {
     return Padding(
@@ -33,7 +35,7 @@ import 'package:project_pas/App/View/Auth/LoginPage.dart';
       height: 40,
       child: ElevatedButton(
         onPressed: () {
-          // Kosong ngga ada isi nya nih
+          Get.to(const OTPPageRegister());
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Colors.white),

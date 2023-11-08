@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:project_pas/App/Component/Auth/OTPMethod.dart';
+import 'package:project_pas/App/Component/Auth/OTPMethodPaswword.dart';
 
-class OTPPage extends StatefulWidget {
-  const OTPPage({Key? key}) : super(key: key);
+class OTPPagePassword extends StatefulWidget {
+  const OTPPagePassword({Key? key}) : super(key: key);
 
   @override
-  _OTPPageState createState() => _OTPPageState();
+  _OTPPagePasswordState createState() => _OTPPagePasswordState();
 }
 
-class _OTPPageState extends State<OTPPage> {
-
+class _OTPPagePasswordState extends State<OTPPagePassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +18,7 @@ class _OTPPageState extends State<OTPPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Verify your account',
+              'Verify your code OTP',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 32,
@@ -39,7 +38,7 @@ class _OTPPageState extends State<OTPPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
                 4,
-                (index) => buildOTPTextField(index,context),
+                (index) => buildOTPTextField(index, context),
               ),
             ),
             const SizedBox(height: 50),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:project_pas/App/View/Auth/OTPPage.dart';
+import 'package:project_pas/App/View/Auth/ForgotPassword.dart';
+
 import 'package:project_pas/App/View/Auth/RegisterPage.dart';
+import 'package:project_pas/App/View/NavigationBar/BottomNavigationBar.dart';
 
 Widget buildLogo(BuildContext context) {
     return Image.asset(
@@ -18,7 +20,7 @@ Widget buildLogo(BuildContext context) {
         alignment: Alignment.centerRight,
         child: TextButton(
           onPressed: () {
-            // Kosong ngga ada isi nya nih
+            Get.to(ForgotPassword());
           },
           child: const Text("Forgot password?",
               style: TextStyle(color: Colors.white)),
@@ -33,7 +35,7 @@ Widget buildLogo(BuildContext context) {
       height: 40,
       child: ElevatedButton(
         onPressed: () {
-          Get.to(const OTPPage());
+          Get.offAll(MyHomePage());
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -69,3 +71,4 @@ Widget buildLogo(BuildContext context) {
       ),
     );
   }
+  
