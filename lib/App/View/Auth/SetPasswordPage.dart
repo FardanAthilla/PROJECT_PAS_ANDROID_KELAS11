@@ -18,7 +18,7 @@ class _SetPasswordPageState extends State<SetPasswordPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Set Now Password',
+              'Set New Password',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 32,

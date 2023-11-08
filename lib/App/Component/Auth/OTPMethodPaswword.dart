@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pinput/pinput.dart';
 import 'package:project_pas/App/View/Auth/SetPasswordPage.dart';
 
 Widget buildOTPTextField(int index, BuildContext context) {
@@ -29,6 +30,16 @@ Widget buildOTPTextField(int index, BuildContext context) {
     ),
   );
 }
+
+const defaultPinTheme = PinTheme(
+  width: 56,
+  height: 56,
+  textStyle: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600),
+  decoration: BoxDecoration(
+    border: Border(bottom: BorderSide(color: Colors.white, width: 1))
+    ),
+  );
+
 
 Widget buildSubmitButton(BuildContext context) {
   return SizedBox(
